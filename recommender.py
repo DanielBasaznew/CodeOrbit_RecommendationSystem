@@ -42,7 +42,6 @@ class ContentRecommender:
             return []
 
         target_idx = self.title_to_idx[lookup]
-        actual_title = self.df.iloc[target_idx]["title"]
 
         # Retrieve similarity scores for this item across all catalog entries
         scores = list(enumerate(self.sim_matrix[target_idx]))
